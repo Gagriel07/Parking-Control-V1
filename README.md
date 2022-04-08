@@ -41,5 +41,9 @@ Adicione a expressão no __resources/templates/aplication.properties__.
 
 No canto superior direito da tela, clique no nome New Parking Control e você sera redirecionado para um formulario para realizar a inserção de uma vaga
 
+<div align="center">
+    <img src="![Index](https://user-images.githubusercontent.com/94410201/162546615-49be9939-02d1-46aa-b804-af22ca9b7530.jpeg)" width="700px">
+</div>
+
 
 
