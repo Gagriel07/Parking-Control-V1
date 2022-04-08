@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Parking Control</title>
+    <link rel="stylesheet" href="../static/css/styleNewParkingSpot.css" th:href="@{/css/styleNewParkingSpot.css}">
+    <link rel="icon" type="image/x-icon" href="../images/iconCar.png" th:ref="@{/images/iconCar.png}">
+</head>
+
+<body>
+
+    <header class="header-class">
+        <a href="/"><img class="header-img" src="../images/car.svg" th:src="@{/images/car.svg}" alt="Car"></a>
+        <nav class="header-nav">
+            <a class="header-item" href="http://localhost:8080/NewParkingSpot">New Parking Spot</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="text">Create New Parking Spot</h1>
+            <div class="divform">
+                <form class="main-form" th:action="@{/}" th:object="${parking}" method="POST">
+<!--                    <label>Parking Spot Number</label>-->
+                    <input type="text" name="Parking Spot Number" th:field="*{parkingSpotNumber}" class="form-control"
+                        placeholder="Enter here Parking Spot Number" required />
+
+<!--                    <label>License Plate Car</label>-->
+                    <input type="text" name="License Plate Car" th:field="*{licensePlateCar}" class="form-control"
+                        placeholder="Enter here License Plate Car" required />
+
+<!--                    <label>Brand Car</label>-->
+                    <input type="text" name="Brand Car" th:field="*{brandCar}" class="form-control"
+                        placeholder="Enter here Brand Car" required />
+
+<!--                    <label>Model Car</label>-->
+                    <input type="text" name="Model Car" th:field="*{modelCar}" class="form-control"
+                        placeholder="Enter here Model Car" required />
+
+<!--                    <label>Color Car</label>-->
+                    <input type="text" name="Color Car" th:field="*{colorCar}" class="form-control"
+                        placeholder="Enter here Color Car" required />
+
+<!--                    <label>Responsible Name</label>-->
+                    <input type="text" name="Responsible Name" th:field="*{responsibleName}" class="form-control"
+                        placeholder="Enter here Responsible Name" required />
+
+<!--                    <label>Apartment</label>-->
+                    <input type="text" name="Apartment" th:field="*{apartment}" class="form-control"
+                        placeholder="Enter here Apartment" required />
+
+<!--                    <label>Block</label>-->
+                    <input type="text" name="Block" th:field="*{block}" class="form-control"
+                        placeholder="Enter here Block" required />
+
+                    <button type="submit" class="button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

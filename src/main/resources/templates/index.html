@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Control</title>
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}">
+    <link rel="icon" type="image/x-icon" href="../images/iconCar.png" th:ref="@{/images/iconCar.png}">
+</head>
+<body>
+    <header class="header-class">
+        <a href="/"><img class ="header-img" src="../images/car.svg" th:src="@{/images/car.svg}" alt="Car"></a>
+        <nav class="header-nav">
+            <a class="header-item" href="http://localhost:8080/NewParkingSpot">New Parking Spot</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="main-content">
+                <h1 class="text">List of Parked Cars</h1>
+                <table class="main-table">
+                    <thead class="table-dark">
+                        <tr class="title">
+                            <th>Id</th>
+                            <th>Parking Spot Number</th>
+                            <th>License Plate Car</th>
+                            <th>Brand Car</th>
+                            <th>Model Car</th>
+                            <th>Color Car</th>
+                            <th>Registration Date</th>
+                            <th>Responsible Name</th>
+                            <th>Apartment</th>
+                            <th>Block</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="results">
+                        <tr class="java" th:each = "parking: ${parking}">
+                            <td th:text = "${parking.id}"></td>
+                            <td th:text = "${parking.parkingSpotNumber}"></td>
+                            <td th:text = "${parking.licensePlateCar}"></td>
+                            <td th:text = "${parking.brandCar}"></td>
+                            <td th:text = "${parking.modelCar}"></td>
+                            <td th:text = "${parking.colorCar}"></td>
+                            <td th:text = "${parking.registrationDate}"></td>
+                            <td th:text = "${parking.responsibleName}"></td>
+                            <td th:text = "${parking.apartment}"></td>
+                            <td th:text = "${parking.block}"></td>
+                            <td>
+                                <a th:href ="@{http://localhost:8080/{id} (id=${parking.id})}" class="action">
+                                    <button class="button buttonDelete">Delete</button>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
