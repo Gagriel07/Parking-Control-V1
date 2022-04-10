@@ -12,7 +12,7 @@
     <header class="header-class">
         <a href="/"><img class ="header-img" src="../images/car.svg" th:src="@{/images/car.svg}" alt="Car"></a>
         <nav class="header-nav">
-            <a class="header-item" href="http://localhost:8080/NewParkingSpot">New Parking Spot</a>
+            <a class="header-item" href="/NewParkingSpot">New Parking Spot</a>
         </nav>
     </header>
 
@@ -50,7 +50,7 @@
                             <td th:text = "${parking.apartment}"></td>
                             <td th:text = "${parking.block}"></td>
                             <td>
-                                <a th:href ="@{http://localhost:8080/{id} (id=${parking.id})}" class="action">
+                                <a th:href ="@{/{id} (id=${parking.id})}" class="action">
                                     <button class="button buttonDelete">Delete</button>
                                 </a>
                             </td>
