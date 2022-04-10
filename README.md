@@ -1,5 +1,7 @@
 # Parking-Control-V1
-Spring Boot Parking Control
+Spring Boot Parking Control.
+
+Controle de vagas de estacionamento de uma garagem de apartamento.
 
 Projeto todo foi contruido com base no Framework Spring Boot do JAVA.
 
@@ -31,19 +33,59 @@ altere o __pom.xml__ e adicione o seu.
 
 ## Como utilizar?
 
-Após tudo configurado sera configura um servidor TomCat na porta 8080, então acessamos pelo http://localhost:8080.  
+Inicie a aplicação no arquivo ProjetoTesteApplication.java localizado no __src/main/java/br.com.gavds.www.Projeto_Teste__
 
-Se a porta ja estiver em uso, altere ele com a seguinte expressão __server.port = 8089__ como exemplo.  
+Após tudo configurado sera inicializado um servidor TomCat na porta 8080, então acessamos pelo http://localhost:8080.  
+
+Se a porta ja estiver em uso, altere a porta com a seguinte expressão __server.port = 8089__ como exemplo.  
 
 Adicione a expressão no __resources/templates/aplication.properties__.  
 
 ## Criar um novo Parking Spot
 
-No canto superior direito da tela, clique no nome New Parking Control e você sera redirecionado para um formulario para realizar a inserção de uma vaga
+No canto superior direito da tela, clique em __New Parking Control__ e você sera redirecionado para um formulario para realizar a inserção de uma vaga.  
 
 <div align="center">
-    <img src="![Index](https://user-images.githubusercontent.com/94410201/162546615-49be9939-02d1-46aa-b804-af22ca9b7530.jpeg)" width="700px">
+    <img src="https://user-images.githubusercontent.com/94410201/162633354-1865cee1-4abd-4ed2-bf83-43b52de57cce.jpeg" width="700px">
 </div>
 
+Após clicar você será redirecionado para a pagina de registro para um nova vaga de estacionamento.  
 
+<div align="center">
+    <img src="https://user-images.githubusercontent.com/94410201/162634715-aa4f19e3-0023-43e9-ac5a-41f6d7049433.jpeg" width="700px">
+</div>
 
+Para realizar o cadastro devemos seguir um padrão:  
+
+__Parking Spot Number__ - Número da Vaga de Estacionameto  
+__License Plate Car__ - Número da Placa do Carro  
+__Brad Car__ - Marca do Carro  
+__Model Car__ - Modelo do Carro  
+__Color Car__ - Cor do Carro  
+__Responsible Name__ - Nome do responsável pela Vaga  
+__Apartment__ - Número do Apartamento  
+__Block__ - Número do Bloco  
+
+Exemplo:  
+
+<div align="center">
+    <img src="https://user-images.githubusercontent.com/94410201/162635114-c3093523-e9c6-41b9-8a8e-b6720e7a98c9.png" width="700px">
+</div>
+
+Para finalizar clique em __Submit__ e será cadastrado uma nova vaga, após isso você será redirecionado para o Index com os dados cadastrados sendo mostrados na tabela.
+
+<div align="center">
+    <img src="https://user-images.githubusercontent.com/94410201/162635176-5d38b968-a0a1-4128-b700-12c813a90cc0.png" width="700px">
+</div>
+
+E para excluir uma vaga de estacionamento basta clicar em __Delete__ na aba __Actions__.
+
+<div align="center">
+    <img src="https://user-images.githubusercontent.com/94410201/162635500-19cd26c4-5a0c-44c7-9f73-ce3593b38a35.png" width="700px">
+</div>
+
+Após isso a vaga será deletada do Banco de Dados e não será exibida na tela novamente.
+
+<div align="center">
+    <img src="https://user-images.githubusercontent.com/94410201/162635583-76b965a6-37d0-4493-bfa5-d4cd00807bfc.png" width="700px">
+</div>
